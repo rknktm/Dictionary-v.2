@@ -1,5 +1,6 @@
 
 from time import sleep
+import os
 
 # finding word
 def find(word):
@@ -14,7 +15,7 @@ def find(word):
       sleep(3)
       return f" {word} ==> \N{sauropod}  ==> {responce} "
 
-# additin a new word pairs
+# addition a new word pairs
 def add(key,value):
   # word kontrol
   with open("words.txt","r",encoding = "utf-8") as file:
@@ -103,16 +104,18 @@ def wlist():
     check = 0
     for i in new_liste:
       print(i[0],(17-len(i[0]))*("."),i[1])
-      check +=1
+      check += 1
     print(f"Total items in the dictionary are ==> {check} \N{sauropod} ")
     sleep(2)
  
     
 while True:
   sleep(2)
+  os.system('cls')
   print("""
   ******************************
-  *   \N{ghost}      MENU     \N{ghost}      *
+  *       ANTONYM WORDS        *
+  *  \N{ghost}       MENU        \N{ghost}   *
   *----------------------------*
   *       1-Adding             *
   *       2-Deleting           *
@@ -147,7 +150,7 @@ while True:
     print(update(key,oldv,newv))
       
   elif n == "4" :
-    word = input("Write a word to be finded: ")
+    word = input("Write a word to be found: ")
     word= word.capitalize()
     print(find(word))
        
