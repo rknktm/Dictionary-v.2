@@ -1,5 +1,3 @@
-
-import re
 from time import sleep
 import os
 # 1-addition a new word pairs
